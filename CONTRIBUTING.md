@@ -1,7 +1,20 @@
 # Contributing
 
+### Contributors: 
+- Kelvin Wong 
+- Qurat-ul-Ain Azim
+- HanChen Wang
+- Natalie Cho
+
 Contributions are welcome, and they are greatly appreciated! Every little bit
 helps, and credit will always be given.
+
+## Submiting changes: Pull Request Process
+- Create a branch that you will use to make your changes. Ensure to use an appropriate name (ex. `bugfix/bug-name`)
+- Run your code locally prior to submission to ensure that it works properly
+- Ensure that your code is properly documented
+- Ensure that any temporary files are removed prior to the creation of a commit
+- Commit your changes and create a pull request to the `main` branch of the repository. The pull request will be reviewed by the admin of this repository and if approved, the changes will be merged to the `main` branch.
 
 ## Types of Contributions
 
