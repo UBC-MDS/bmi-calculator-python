@@ -11,6 +11,10 @@ The package contains the following functions
 - `project_calories`: computes how much average calorie intake is ideal per day given a targeted weight and the timeframe to reach the goal. Also presents a visual trajectory for calories
 - `exercise_plan`: suggests possible exercise plans to achieve the targeted weight
 
+## Suitability within the Python Ecosystem
+
+Our BMI calculator is unique in the sense that it provides easy and instantly understandable visuals to quickly get the gist of how healthy a person is. The package does not rely on any historical data of a person's weights, and hence needs no dataset files to be provided. The only arguments needed for the functions of this calculator are current weight and height, and target weight with timeframe in case weight change is desired. It also recommends simple figures for weight gain/loss goals. There are many BMI calculators in the Python ecosystem. Some of the. examples can be found [here](https://pypi.org/project/body-mass-index/) and [here](https://pypi.org/project/Py-bmi/). Both these offer limited visual aid in understanding one's health metrics and targets related to BMI.
+
 
 ## Installation
 
