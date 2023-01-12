@@ -1,11 +1,5 @@
 # Contributing
 
-### Contributors: 
-- Kelvin Wong 
-- Qurat-ul-Ain Azim
-- HanChen Wang
-- Natalie Cho
-
 Contributions are welcome, and they are greatly appreciated! Every little bit
 helps, and credit will always be given.
 
