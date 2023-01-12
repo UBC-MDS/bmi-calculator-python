@@ -1,6 +1,16 @@
 # bmi_calculator
 
-A BMI calculator and more!
+This python package is for calculation of BMI (body mass index), and some more computations based on weight loss goals. The package provides simple answers to a user's weight loss goals in terms of how much weight loss/gain and calorie deficit/increase should be aimed for with a target weight and time frame in mind.  The package also provides helpful visualizations about BMI and calorie intake change trajectory leading to the target.
+
+## Functions
+
+The package contains the following functions
+
+- `calculate_bmi`: computes user's BMI based on weight and height. Also creates a visual of the BMI on scale
+- `project_bmi`: computes how much average change in BMI should be achieved per day given a targeted weight and the timeframe to reach the goal. Also presents a visual trajectory for BMI
+- `project_calories`: computes how much average calorie intake is ideal per day given a targeted weight and the timeframe to reach the goal. Also presents a visual trajectory for calories
+- `exercise_plan`: suggests possible exercise plans to achieve the targeted weight
+
 
 ## Installation
 
