@@ -24,11 +24,13 @@ $ pip install bmi_calculator
 
 ## Usage
 
-- TODO
+The package is under active work for now, and the package functions need updating with appropriate functionality. The usage will be updated with details as the functions are updated.
 
 ## Contributing
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a [Code of Conduct](https://github.com/UBC-MDS/bmi-calculator-python/blob/master/CONDUCT.md). You can follow guidelines outlined [here](https://github.com/UBC-MDS/bmi-calculator-python/blob/master/CONTRIBUTING.md) in case you want to contribute to the project. By contributing to this project, you agree to abide by its terms.
+
+The list of contributors to the original project can be found [here](https://github.com/UBC-MDS/bmi-calculator-python/blob/master/CONTRIBUTORS.md).
 
 ## License
 
