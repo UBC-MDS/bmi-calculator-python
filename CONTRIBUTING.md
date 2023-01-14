@@ -82,6 +82,6 @@ Code of Conduct. By contributing to this project you agree to abide by its terms
 Any violations that occur can be reported to:
 
 - Qurat-ul-Ain Azim at qazim1@student.ubc.ca
-- HanCHen Wang at hcwang24@student.ubc.ca
+- HanChen Wang at hcwang24@student.ubc.ca
 - Kelvin Wong at now@student.ubc.ca
 - Natalie Cho at natcho1@student.ubc.ca
