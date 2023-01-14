@@ -24,7 +24,7 @@ $ pip install bmi_calculator
 
 ## Usage
 
-- TODO
+The package is under active work for now, and the package functions need updating with appropriate functionality. The usage will be updated with details as the functions are updated.
 
 ## Contributing
 
