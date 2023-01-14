@@ -23,9 +23,5 @@ def calculate_bmi(weight, height, return_graph=False):
         saved or shared. Could be a simplified version of 
         https://cdn.dribbble.com/users/31916/screenshots/310892/bmi-chart.png
     """
-    if return_graph == False:
-        return (weight/(height ** 2))
-    else:
-        # return graph here.
-        pass
+    pass
     
