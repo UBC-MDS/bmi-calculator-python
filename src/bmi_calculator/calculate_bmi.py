@@ -17,9 +17,9 @@ def calculate_bmi(weight, height, return_graph=False):
     
     Returns
     -------
-    float or alt.Chart
+    float or plotly.graph_objects
         If `return_graph` is `False`, we get a value of the body mass index. 
-        If `return_graph` is True, we get an `alt.Chart` instead that can be
+        If `return_graph` is True, we get an `plotly.graph_objects` instead that can be
         saved or shared. Could be a simplified version of 
         https://cdn.dribbble.com/users/31916/screenshots/310892/bmi-chart.png
     """
