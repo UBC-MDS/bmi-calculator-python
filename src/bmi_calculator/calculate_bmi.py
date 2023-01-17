@@ -23,5 +23,33 @@ def calculate_bmi(weight, height, return_graph=False):
         saved or shared. Could be a simplified version of 
         https://cdn.dribbble.com/users/31916/screenshots/310892/bmi-chart.png
     """
-    pass
+    bmi = weight/(height ** 2)
+    if return_graph == False:
+        return bmi
+    else:
+        bmi=28.5
+        fig = go.Figure(go.Indicator(
+            mode = "gauge+number+delta",
+            value = bmi,
+            domain = {'x': [0, 1], 'y': [0, 1]},
+            title = {'text': "Body Mass Index", 'font': {'size': 24}},
+            delta = {'reference': 25, 'increasing': {'color': "Pink"}},
+            gauge = {
+                'axis': {'range': [None, 50], 'tickwidth': 1, 'tickcolor': "black"},
+                'bar': {'color': "Red"},
+                'bgcolor': "white",
+                'borderwidth': 2,
+                'bordercolor': "black",
+                'steps': [
+                    {'range': [0, 18.5], 'color': 'lightblue'},
+                    {'range': [18.5, 25], 'color': 'lightgreen'},
+                    {'range': [25, 30], 'color': 'lightyellow'},
+                    {'range': [30, 35], 'color': 'orange'},
+                    {'range': [35, 50], 'color': 'Pink'}],
+                }))
+        
+        fig.update_layout(font = {'color': "darkblue", 'family': "Arial"})
+        
+        fig.show()
+        return fig
     
