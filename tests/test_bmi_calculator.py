@@ -1,4 +1,4 @@
-from bmi-calculator-python import calculate_bmi as calc_bmi # Need to figure out how to call the function
+from bmi-calculator-python import calculate_bmi as calc_bmi # Need to figure out how to call the function.
 import plotly.graph_objects as go
 import pytest
 
