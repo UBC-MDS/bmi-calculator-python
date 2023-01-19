@@ -28,4 +28,17 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
         associated as an "or". If `return_graph` is True, we get an `alt.Chart`
         instead that can be saved or shared.
     """
-    pass
+    def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
+        current_bmi = weight/height**2
+        bmi_change = target_bmi - current_bmi
+        bmi_change_per_day = bmi_change/number_of_days
+
+        df = {'Days': np.arange(0, number_of_days), 
+              'BMI change': np.arange(current_bmi, target_bmi,
+              bmi_change_per_day)}
+
+        if return_graph:
+          fig = px.line(df, x="Days", y="BMI change", title='Projected BMI trajectory')
+          fig.show()
+    
+    return round(bmi_change_per_day*7, 2)
