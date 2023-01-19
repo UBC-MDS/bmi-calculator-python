@@ -7,7 +7,7 @@ def project_calories(weight, height, sex, age, pal, target_weight, number_of_day
     weight : float
         Current weight in kilograms (kg).
     height : float
-        Current height in centimeters (cm).
+        Current height in meters (m).
     sex : int
         1 for male.
         2 for female.
@@ -49,9 +49,9 @@ def project_calories(weight, height, sex, age, pal, target_weight, number_of_day
 
     # Calories per day calculation 
     if sex == 1:
-        BMR = 66.47 + (13.75*weight) + (5.003*height) - (6.755*age)
+        BMR = 66.47 + (13.75*weight) + (5.003*(height*100)) - (6.755*age)
     elif sex == 2:
-        BMR = 665.1 + (9.563*weight) + (1.85*height) - (4.676*age)
+        BMR = 665.1 + (9.563*weight) + (1.85*(height*100)) - (4.676*age)
     else:
         raise TypeError("Please enter either 1 for male or 2 for female as a sex value")
     
