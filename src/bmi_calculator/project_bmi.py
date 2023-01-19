@@ -1,5 +1,5 @@
 def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
-    """Compute averge BMI change per day based on current weight, height, age and target
+    """Compute averge BMI change per week based on current weight, height, age and target
     BMI.
 
     The average BMI increase or decrease each day is computed. If `return_graph` is `True`, an `alt.Chart` is given based on forcasted BMI for the targetted timeframe 
@@ -29,12 +29,11 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
         instead that can be saved or shared.
     """
     def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
-        current_bmi = weight/height**2
-        bmi_change = target_bmi - current_bmi
-
+        
         if not (
             isinstance(weight, (int, float))
             & isinstance(height, (int, float))
+            & isinstance(target_bmi, (int, float))
             & isinstance(return_graph, bool)
         ):
             raise TypeError(
@@ -45,6 +44,9 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
             raise ValueError(
                 "ValueError! Please enter a positive non-zero weight and height!"
             )
+
+        current_bmi = weight/height**2
+        bmi_change = target_bmi - current_bmi
 
         bmi_change_per_day = bmi_change/number_of_days
         
