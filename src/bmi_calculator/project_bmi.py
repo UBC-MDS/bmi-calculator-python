@@ -31,8 +31,23 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
     def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
         current_bmi = weight/height**2
         bmi_change = target_bmi - current_bmi
-        bmi_change_per_day = bmi_change/number_of_days
 
+        if not (
+            isinstance(weight, (int, float))
+            & isinstance(height, (int, float))
+            & isinstance(return_graph, bool)
+        ):
+            raise TypeError(
+                "TypeError! Please check the type of input parameters! "
+            )
+
+        if not ((weight > 0) & (height > 0)):
+            raise ValueError(
+                "ValueError! Please enter a positive non-zero weight and height!"
+            )
+
+        bmi_change_per_day = bmi_change/number_of_days
+        
         df = {'Days': np.arange(0, number_of_days), 
               'BMI change': np.arange(current_bmi, target_bmi,
               bmi_change_per_day)}
