@@ -33,7 +33,7 @@ def test_exception_cases():
     with pytest.raises(Exception):
         project_bmi(weight=108, height=1.88, target_bmi = 28, number_of_days=60, return_graph=0)
     with pytest.raises(Exception):
-        project_bmi_bmi()
+        project_bmi()
 
 def test_negative_or_zero_inputs():
     """Test negative or zero inputs"""
