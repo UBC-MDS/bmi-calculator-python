@@ -30,6 +30,7 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
     """
     def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
         
+        # check for bad inputs
         if not (
             isinstance(weight, (int, float))
             & isinstance(height, (int, float))
@@ -45,10 +46,12 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
                 "ValueError! Please enter a positive non-zero weight and height!"
             )
 
+        # BMI change computation
         current_bmi = weight/height**2
         bmi_change = target_bmi - current_bmi
         bmi_change_per_day = bmi_change/number_of_days
 
+        # return computation or graph
         if not return_graph:
             return round(bmi_change_per_day*7, 2)
         else:
