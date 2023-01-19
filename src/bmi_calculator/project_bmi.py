@@ -57,7 +57,7 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
         else:
             df = {'Days': np.arange(0, number_of_days), 
                 'BMI change': np.arange(current_bmi, target_bmi,
-                bmi_change_per_day)}
+                bmi_change_per_day)[:number_of_days]}
 
             if return_graph:
                 fig = px.line(df, x="Days", y="BMI change", title='Projected BMI trajectory')
