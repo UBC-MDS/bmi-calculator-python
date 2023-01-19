@@ -20,8 +20,8 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
     Returns
     -------
     float
-        Averrage BMI change per day
-    alt.Chart
+        Averrage BMI change per week
+    or plotly.fig
         If `return_graph` is `False`, we get a dictionary with key to be different
         exercises, and the value to be number of minutes (rounded to nearest
         integer) needed for that activity. Note that each of the activities are
