@@ -24,7 +24,55 @@ $ pip install bmi_calculator
 
 ## Usage
 
-The package is under active work for now, and the package functions need updating with appropriate functionality. The usage will be updated with details as the functions are updated.
+To use the package, import the package with following commands:
+
+```
+from bmi_calculator import calculate_bmi
+from bmi_calculator import exercise_plan
+from bmi_calculator import project_bmi
+from bmi_calculator import project_calories
+```
+
+To use the functions, see examples below:
+
+Calculate BMI:
+```
+# Weight 100kg, height 1.85 meters, BMI value returned.
+calculate_bmi(100, 1.85, return_graph=False)
+# 29.218407596785973
+
+# Weight 100kg, height 1.85 meters, BMI graph returned.
+calculate_bmi(100, 1.85, return_graph=True)
+```
+![BMI graph](https://github.com/UBC-MDS/bmi-calculator-python/tree/update_usage/img/calculate_bmi_graph_example.png)
+
+Compute average BMI change per week
+```
+# Weight 100kg, height 1.85 meters, BMI goal 25, 30 days to reach goal, return average BMI change per week. 
+project_bmi(100, 1.85, 25, 30, return_graph=False)
+-0.98
+
+# Weight 100kg, height 1.85 meters, BMI goal 25, 30 days to reach goal, return plot of Projected BMI trajectory. 
+project_bmi(100, 1.85, 25, 30, return_graph=True)
+```
+![Summary graph](https://github.com/UBC-MDS/covizpy/raw/main/img/plot_summary.png)
+
+Compute caloric intake per day based in a target weight
+```
+# Weight 100kg, height 1.85 meters, male, 25 years old, moderate exercise 3-5 times a week, ideal weight 75kg, 25 days to reach goal, return caloric intake per day based in a target weight. 
+project_calories(100, 1.85, 1, 25, 1.6, 75, 25, return_graph=False)
+2417.0400000000004
+
+# Weight 100kg, height 1.85 meters, male, 25 years old, moderate exercise 3-5 times a week, ideal weight 75kg, 25 days to reach goal, return plot of Projected Weight Loss. 
+project_calories(100, 1.85, 1, 25, 1.6, 75, 25, return_graph=True)
+```
+![Summary graph](https://github.com/UBC-MDS/covizpy/raw/main/img/plot_summary.png)
+
+
+Create an exercise plan
+```
+exercise_plan(weight, height, target_bmi, age, number_of_days, return_graph=False)
+```
 
 ## Contributing
 
