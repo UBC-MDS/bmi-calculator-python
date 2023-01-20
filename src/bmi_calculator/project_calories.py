@@ -1,3 +1,7 @@
+import pandas as pd
+import numpy as np
+import plotly.express as px
+
 def project_calories(weight, height, sex, age, pal, target_weight, number_of_days, return_graph=False):
     """Returns caloric intake per day based in a target weight. Assumption is that the goal is losing weight
     rather than gaining weight.
@@ -35,7 +39,7 @@ def project_calories(weight, height, sex, age, pal, target_weight, number_of_day
 
     Examples
     --------
-    >>> project_calories(68.1, 1.83, 22, 25, 100, return_graph=True)
+    >>> project_calories(68.1, 1.83, 1, 22, 1.6, 75, 25, return_graph=True)
     """
     # Ensuring that inputs are valid
     if weight <= 0 or height <= 0 or age <=0 or target_weight <=0 or number_of_days <=0:
@@ -65,8 +69,8 @@ def project_calories(weight, height, sex, age, pal, target_weight, number_of_day
         return calories_per_day
     else:
         df = {
-            "days": np.arange(0, number_of_days),
-            "weight": np.linspace(weight, target_weight, len(np.arange(0, number_of_days)))
+            "Days": np.arange(0, number_of_days),
+            "Weight": np.linspace(weight, target_weight, len(np.arange(0, number_of_days)))
         }
         
         fig = px.line(df, x="Days", y="Weight", title='Projected Weight Loss')

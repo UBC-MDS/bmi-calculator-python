@@ -1,8 +1,9 @@
+import pandas as pd
 import numpy as np
-
+import plotly.express as px
 
 def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
-    """Compute averge BMI change per week based on current weight, height, age and target
+    """Compute average BMI change per week based on current weight, height, age and target
     BMI.
 
     The average BMI increase or decrease each day is computed. If `return_graph` is `True`, an `alt.Chart` is given based on forcasted BMI for the targetted timeframe
