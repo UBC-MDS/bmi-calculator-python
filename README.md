@@ -39,9 +39,27 @@ Calculate BMI:
 ```
 # Weight 100kg, height 1.85 meters, BMI value returned.
 calculate_bmi(100, 1.85, return_graph=False)
+# 29.218407596785973
+```
+
+```
 # Weight 100kg, height 1.85 meters, BMI graph returned.
 calculate_bmi(100, 1.85, return_graph=True)
 ```
+![Summary graph](https://github.com/UBC-MDS/covizpy/raw/main/img/plot_summary.png)
+
+Compute averge BMI change per week
+```
+# Weight 100kb, height 1.85 meters, BMI goal 25, 30 days to reach goal, return average BMI change per week. 
+project_bmi(100, 1.85, 25, 30, return_graph=False)
+-0.98
+```
+
+```
+# Weight 100kb, height 1.85 meters, BMI goal 25, 30 days to reach goal, return plot of Projected BMI trajectory. 
+project_bmi(100, 1.85, 25, 30, return_graph=True)
+```
+![Summary graph](https://github.com/UBC-MDS/covizpy/raw/main/img/plot_summary.png)
 
 
 ## Contributing
