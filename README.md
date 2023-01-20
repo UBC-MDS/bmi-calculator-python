@@ -44,7 +44,7 @@ calculate_bmi(100, 1.85, return_graph=False)
 # Weight 100kg, height 1.85 meters, BMI graph returned.
 calculate_bmi(100, 1.85, return_graph=True)
 ```
-![BMI graph](https://github.com/UBC-MDS/bmi-calculator-python/tree/update_usage/img/calculate_bmi_graph_example.png)
+![BMI graph](https://github.com/UBC-MDS/bmi-calculator-python/blob/master/img/calculate_bmi_graph_example.png)
 
 Compute average BMI change per week
 ```
