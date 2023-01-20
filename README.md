@@ -24,7 +24,25 @@ $ pip install bmi_calculator
 
 ## Usage
 
-The package is under active work for now, and the package functions need updating with appropriate functionality. The usage will be updated with details as the functions are updated.
+To use the package, import the package with following commands:
+
+'''
+from bmi_calculator import calculate_bmi
+from bmi_calculator import exercise_plan
+from bmi_calculator import project_bmi
+from bmi_calculator import project_calories
+'''
+
+To use the functions, see examples below:
+
+Calculate BMI:
+'''
+# Weight 100kg, height 1.85 meters, BMI value returned.
+calculate_bmi(100, 1.85, return_graph=False)
+# Weight 100kg, height 1.85 meters, BMI graph returned.
+calculate_bmi(100, 1.85, return_graph=True)
+'''
+
 
 ## Contributing
 
