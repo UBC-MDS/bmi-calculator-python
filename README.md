@@ -55,7 +55,7 @@ project_bmi(100, 1.85, 25, 30, return_graph=False)
 # Weight 100kg, height 1.85 meters, BMI goal 25, 30 days to reach goal, return plot of Projected BMI trajectory. 
 project_bmi(100, 1.85, 25, 30, return_graph=True)
 ```
-![Summary graph](https://github.com/UBC-MDS/covizpy/raw/main/img/plot_summary.png)
+![Projected BMI trajectory graph](https://github.com/UBC-MDS/bmi-calculator-python/blob/master/img/project_bmi_graph_example.png)
 
 Compute caloric intake per day based in a target weight
 ```
@@ -66,7 +66,7 @@ project_calories(100, 1.85, 1, 25, 1.6, 75, 25, return_graph=False)
 # Weight 100kg, height 1.85 meters, male, 25 years old, moderate exercise 3-5 times a week, ideal weight 75kg, 25 days to reach goal, return plot of Projected Weight Loss. 
 project_calories(100, 1.85, 1, 25, 1.6, 75, 25, return_graph=True)
 ```
-![Summary graph](https://github.com/UBC-MDS/covizpy/raw/main/img/plot_summary.png)
+![Projected Weight Loss graph](https://github.com/UBC-MDS/bmi-calculator-python/blob/master/img/project_calories_graph_example.png)
 
 
 Create an exercise plan
