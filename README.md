@@ -35,7 +35,7 @@ from bmi_calculator import project_calories
 
 To use the functions, see examples below:
 
-###Calculate BMI:
+### Calculate BMI:
 ```
 # Weight 100kg, height 1.85 meters, BMI value returned.
 calculate_bmi(100, 1.85, return_graph=False)
@@ -46,7 +46,7 @@ calculate_bmi(100, 1.85, return_graph=True)
 ```
 ![BMI graph](https://github.com/UBC-MDS/bmi-calculator-python/blob/master/img/calculate_bmi_graph_example.png)
 
-###Compute average BMI change per week
+### Compute average BMI change per week
 ```
 # Weight 100kg, height 1.85 meters, BMI goal 25, 30 days to reach goal, return average BMI change per week. 
 project_bmi(100, 1.85, 25, 30, return_graph=False)
@@ -57,7 +57,7 @@ project_bmi(100, 1.85, 25, 30, return_graph=True)
 ```
 ![Projected BMI trajectory graph](https://github.com/UBC-MDS/bmi-calculator-python/blob/master/img/project_bmi_graph_example.png)
 
-###Compute caloric intake per day based in a target weight
+### Compute caloric intake per day based in a target weight
 ```
 # Weight 100kg, height 1.85 meters, male, 25 years old, moderate exercise 3-5 times a week, ideal weight 75kg, 
 # 25 days to reach goal, return caloric intake per day based in a target weight. 
@@ -70,7 +70,7 @@ project_calories(100, 1.85, 1, 25, 1.6, 75, 25, return_graph=True)
 ```
 ![Projected Weight Loss graph](https://github.com/UBC-MDS/bmi-calculator-python/blob/master/img/project_calories_graph_example.png)
 
-###Create an exercise plan
+### Create an exercise plan
 ```
 exercise_plan(weight, height, target_bmi, age, number_of_days, return_graph=False)
 ```
