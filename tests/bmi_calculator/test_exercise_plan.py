@@ -36,6 +36,8 @@ def test_exception_cases():
 def test_negative_or_zero_inputs():
     """Test negative or zero inputs"""
     with pytest.raises(ValueError):
+        exercise_plan(weight=80, height=3, sex=1, age=20, target_weight=72, number_of_days=50)
+    with pytest.raises(ValueError):
         exercise_plan(weight=-2, height=1.83, sex=2, age=27, target_weight=65, number_of_days=30)
     with pytest.raises(ValueError):
         exercise_plan(weight=63, height=0, sex=2, age=27, target_weight=65, number_of_days=30)
