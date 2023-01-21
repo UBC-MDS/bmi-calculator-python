@@ -1,5 +1,6 @@
 import plotly.graph_objects as go
 
+
 def calculate_bmi(weight, height, return_graph=False):
     """Calculate the body mass index (BMI) based on current weight and height.
 

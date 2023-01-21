@@ -2,7 +2,10 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 
-def project_calories(weight, height, sex, age, pal, target_weight, number_of_days, return_graph=False):
+
+def project_calories(
+    weight, height, sex, age, pal, target_weight, number_of_days, return_graph=False
+):
     """Returns caloric intake per day based in a target weight. Assumption is that the goal is losing weight
     rather than gaining weight.
 
@@ -34,7 +37,7 @@ def project_calories(weight, height, sex, age, pal, target_weight, number_of_day
     Returns
     -------
     float or alt.Chart
-        If `return_graph` is `False`, specifies caloric intake/number_of_days. If `return_graph` is `True`, 
+        If `return_graph` is `False`, specifies caloric intake/number_of_days. If `return_graph` is `True`,
         returns a straight line graph of projected caloric intake/day
 
     Examples
@@ -42,25 +45,50 @@ def project_calories(weight, height, sex, age, pal, target_weight, number_of_day
     >>> project_calories(68.1, 1.83, 1, 22, 1.6, 75, 25, return_graph=True)
     """
     # Ensuring that inputs are valid
-    if weight <= 0 or height <= 0 or age <=0 or target_weight <=0 or number_of_days <=0:
-        raise ValueError("Please check your input values and ensure that they are appropriate")
+    if not (
+        isinstance(weight, (int, float))
+        & isinstance(height, (int, float))
+        & isinstance(age, (int, float))
+        & isinstance(pal, (int, float))
+        & isinstance(target_weight, (int, float))
+        & isinstance(number_of_days, (int, float))
+        & isinstance(return_graph, bool)
+    ):
+        raise TypeError(
+            "TypeError! Please check carefully on the type of input parameters! "
+        )
+
+    if (
+        weight <= 0
+        or height <= 0
+        or age <= 0
+        or target_weight <= 0
+        or number_of_days <= 0
+    ):
+        raise ValueError(
+            "Please check your input values and ensure that they are appropriate"
+        )
 
     if pal not in [1.2, 1.4, 1.6, 1.75]:
-        raise ValueError("Please enter either 1.2, 1.4, 1.6, or 1.75 as a value for pal")
-    
-    if target_weight > weight:
-        raise ValueError("This application is for weight loss only. Please enter a target weight that is lower than your current weight")
+        raise ValueError(
+            "Please enter either 1.2, 1.4, 1.6, or 1.75 as a value for pal"
+        )
 
-    # Calories per day calculation 
+    if target_weight > weight:
+        raise ValueError(
+            "This application is for weight loss only. Please enter a target weight that is lower than your current weight"
+        )
+
+    # Calories per day calculation
     if sex == 1:
-        BMR = 66.47 + (13.75*weight) + (5.003*(height*100)) - (6.755*age)
+        BMR = 66.47 + (13.75 * weight) + (5.003 * (height * 100)) - (6.755 * age)
     elif sex == 2:
-        BMR = 665.1 + (9.563*weight) + (1.85*(height*100)) - (4.676*age)
+        BMR = 665.1 + (9.563 * weight) + (1.85 * (height * 100)) - (4.676 * age)
     else:
         raise TypeError("Please enter either 1 for male or 2 for female as a sex value")
-    
+
     calories_sustain_weight = BMR * pal
-    calories_lose_weight = (weight - target_weight) * (1100/number_of_days)
+    calories_lose_weight = (weight - target_weight) * (1100 / number_of_days)
 
     calories_per_day = calories_sustain_weight - calories_lose_weight
 
@@ -69,13 +97,12 @@ def project_calories(weight, height, sex, age, pal, target_weight, number_of_day
         return calories_per_day
     else:
         df = {
-            "Days": np.arange(0, number_of_days),
-            "Weight": np.linspace(weight, target_weight, len(np.arange(0, number_of_days)))
+            "Days": np.arange(number_of_days),
+            "Weight": np.linspace(
+                weight, target_weight, len(np.arange(number_of_days))
+            ),
         }
-        
-        fig = px.line(df, x="Days", y="Weight", title='Projected Weight Loss')
+
+        fig = px.line(df, x="Days", y="Weight", title="Projected Weight Loss")
         fig.update_yaxes(range=[target_weight - 5, weight + 5])
         return fig
-    
-
-    
