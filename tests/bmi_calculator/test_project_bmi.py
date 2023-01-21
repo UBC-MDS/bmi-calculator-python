@@ -1,6 +1,6 @@
 from bmi_calculator import project_bmi
-
-import plotly as px
+import plotly.express as px
+import plotly
 import pytest
 
 
@@ -13,7 +13,7 @@ def test_standard_case():
 def test_return_graph():
     """Test when return_graph=True"""
     graph = project_bmi(weight=108, height=1.88, target_bmi = 33, number_of_days=60, return_graph = True)
-    assert isinstance(graph, px.Figure), "Plotly Figure object should be returned."
+    assert isinstance(graph, plotly.graph_objs._figure.Figure), "Plotly Figure object should be returned."
     assert ('data' in graph and 'layout' in graph), "Plotly Figure structure not properly set."
     assert graph.layout['title']['text'] == 'Projected BMI trajectory', "Plotly Figure title not properly set."
     assert round(graph.data[0]['y'][0],2) == 30.56, "Plotly Figure bmi data not properly calculated."
@@ -44,4 +44,4 @@ def test_negative_or_zero_inputs():
     with pytest.raises(Exception):
         project_bmi(weight=90, height=1.88, target_bmi = -2, number_of_days=60)
     with pytest.raises(Exception):
-        project_bmi(weight=90, height=1.88, target_bmi = -2, number_of_days=-40)
+        project_bmi(weight=90, height=1.88, target_bmi = 20, number_of_days=-40)

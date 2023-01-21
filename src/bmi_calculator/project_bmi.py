@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import plotly
 
 def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
     """Compute average BMI change per week based on current weight, height, age and target
@@ -37,12 +38,13 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
         isinstance(weight, (int, float))
         & isinstance(height, (int, float))
         & isinstance(target_bmi, (int, float))
+        & isinstance(number_of_days, (int, float))
         & isinstance(return_graph, bool)
     ):
         raise TypeError("TypeError! Please check the type of input parameters! ")
-    if not ((weight > 0) & (height > 0)):
+    if not ((weight > 0) & (height > 0) & (target_bmi > 0) & (number_of_days > 0)):
         raise ValueError(
-            "ValueError! Please enter a positive non-zero weight and height!"
+            "ValueError! Please enter a positive value for weight, height, target_bmi, and number of days!"
         )
     # BMI change computation
     current_bmi = weight / height**2
@@ -53,8 +55,10 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
         return round(bmi_change_per_day * 7, 2)
     else:
         df = {
-            "Days": np.arange(0, number_of_days),
-            "BMI change": np.arange(current_bmi, target_bmi, bmi_change_per_day),
+            "Days": np.arange(number_of_days),
+            "BMI change": np.linspace(
+                current_bmi, target_bmi, len(np.arange(number_of_days))
+            ),
         }
         fig = px.line(df, x="Days", y="BMI change", title="Projected BMI trajectory")
         fig.update_yaxes(

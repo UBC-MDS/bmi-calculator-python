@@ -1,5 +1,4 @@
 from bmi_calculator import calculate_bmi
-
 import plotly.graph_objects as go
 import pytest
 
