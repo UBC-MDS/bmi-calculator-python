@@ -3,8 +3,8 @@ def exercise_plan(weight, height, target_bmi, age, number_of_days, return_graph=
     BMI.
 
     The calorie consumption needed each day is computed and a set of activities
-    is suggested accordingly. If `return_graph` is `True`, an `alt.Chart` object
-    instead of a dictionary.
+    is suggested accordingly. If `return_graph` is `True`, a
+    `plotly.graph_objects.Figure` object instead of a dictionary.
 
     Parameters
     ----------
@@ -23,11 +23,14 @@ def exercise_plan(weight, height, target_bmi, age, number_of_days, return_graph=
     
     Returns
     -------
-    dict or alt.Chart
+    dict or plotly.graph_objects.Figure
         If `return_graph` is `False`, we get a dictionary with key to be different
         exercises, and the value to be number of minutes (rounded to nearest
         integer) needed for that activity. Note that each of the activities are
-        associated as an "or". If `return_graph` is True, we get an `alt.Chart`
-        instead that can be saved or shared.
+        associated as an "or". If `return_graph` is True, we get a
+        `plotly.graph_objects.Figure` instead that can be saved or shared.
+    
+    Examples
+
     """
     pass

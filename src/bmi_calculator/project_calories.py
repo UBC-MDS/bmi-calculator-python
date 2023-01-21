@@ -6,8 +6,8 @@ import plotly.express as px
 def project_calories(
     weight, height, sex, age, pal, target_weight, number_of_days, return_graph=False
 ):
-    """Returns caloric intake per day based in a target weight. Assumption is that the goal is losing weight
-    rather than gaining weight.
+    """Returns caloric intake per day based in a target weight. Assumption is
+    that the goal is losing weight rather than gaining weight.
 
     Parameters
     ----------
@@ -31,14 +31,15 @@ def project_calories(
     number_of_days : int
         Number of days alotted to achieve target_bmi
     return_graph : bool
-        If `return_graph` is `False`, returns a float specifying caloric intake/number_of_days
-        If `return_graph` is `True`, returns a straight line graph of projected caloric intake/day
+        Whether to return a graph instead of a dictionary
 
     Returns
     -------
-    float or alt.Chart
-        If `return_graph` is `False`, specifies caloric intake/number_of_days. If `return_graph` is `True`,
-        returns a straight line graph of projected caloric intake/day
+    float or `plotly.graph_objects.Figure`
+        If `return_graph` is `False`, returns a float specifying caloric intake
+        divided by the number of days.
+        If `return_graph` is `True`, returns a straight line graph of projected
+        caloric intake per day.
 
     Examples
     --------

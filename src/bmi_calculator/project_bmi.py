@@ -4,10 +4,12 @@ import plotly.express as px
 import plotly
 
 def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
-    """Compute average BMI change per week based on current weight, height, age and target
-    BMI.
+    """Compute average BMI change per week based on current weight, height, age
+    and target BMI.
 
-    The average BMI increase or decrease each day is computed. If `return_graph` is `True`, an `alt.Chart` is given based on forcasted BMI for the targetted timeframe
+    The average BMI increase or decrease each day is computed. If `return_graph`
+    is `True`, a `plotly.graph_objects.Figure` is given based on forcasted BMI
+    for the target timeframe.
 
     Parameters
     ----------
@@ -24,14 +26,13 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
 
     Returns
     -------
-    float
-        Averrage BMI change per week
-    or plotly.fig
+    float or `plotly.graph_objects.Figure`
+        If `return_graph` is `True`, we get the average BMI change per week.
         If `return_graph` is `False`, we get a dictionary with key to be different
         exercises, and the value to be number of minutes (rounded to nearest
         integer) needed for that activity. Note that each of the activities are
-        associated as an "or". If `return_graph` is True, we get an `alt.Chart`
-        instead that can be saved or shared.
+        associated as an "or". If `return_graph` is True, we get a
+        `plotly.graph_objects.Figure` instead that can be saved or shared.
     """
     # check for bad inputs
     if not (
