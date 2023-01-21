@@ -24,7 +24,7 @@ $ pip install bmi_calculator
 
 ## Usage
 
-To use the package, import the package with following commands:
+To use the package, import the package with following command:
 
 ```
 from bmi_calculator import calculate_bmi, exercise_plan, project_bmi, project_calories
@@ -79,7 +79,7 @@ exercise_plan(100, 1.83, 2, 27, 68, 30)
 
 # Weight 100kg, height 1.83 meters, female, aged 27
 # Target weight: 68kg in 30 days
-# But this time, a graph instead (note that the activities are associated as an "OR", i.e., one of them each day will be fine):
+# But this time, a graph instead:
 exercise_plan(100, 1.83, 2, 27, 68, 30, return_graph=True)
 ```
 ![Exercise plan](./img/exercise_plan_graph_example.png)
