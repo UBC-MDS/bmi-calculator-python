@@ -16,7 +16,7 @@ def project_calories(
     height : float
         Current height in meters (m).
     sex : int
-        1 for male.
+        Sex, used in the Harris–Benedict equation estimation, 1 for male and
         2 for female.
     age : int
         Current age in years.
