@@ -39,7 +39,7 @@ def project_calories(
         If `return_graph` is `False`, returns a float specifying caloric intake
         divided by the number of days.
         If `return_graph` is `True`, returns a straight line graph of projected
-        caloric intake per day.
+        weight loss per day.
 
     Examples
     --------
