@@ -29,9 +29,9 @@ def project_calories(
     target_weight: int
         Weight goal to be achieved in number_of_days.
     number_of_days : int
-        Number of days alotted to achieve target_bmi
+        Number of days allotted to achieve target_weight.
     return_graph : bool
-        Whether to return a graph instead of a dictionary
+        Whether to return a graph instead of a float.
 
     Returns
     -------
