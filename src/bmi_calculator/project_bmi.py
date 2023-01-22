@@ -1,8 +1,15 @@
-def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
-    """Compute averge BMI change per week based on current weight, height, age and target
-    BMI.
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly
 
-    The average BMI increase or decrease each day is computed. If `return_graph` is `True`, an `alt.Chart` is given based on forcasted BMI for the targetted timeframe 
+def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
+    """Compute average BMI change per week based on current weight, height, age
+    and target BMI.
+
+    The average BMI increase or decrease each day is computed. If `return_graph`
+    is `True`, a `plotly.graph_objects.Figure` is given based on forcasted BMI
+    for the target timeframe.
 
     Parameters
     ----------
@@ -16,51 +23,54 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
         Number of days to reach the target BMI
     return_graph : bool
         Whether to return a graph instead of a dictionary
-    
+
     Returns
     -------
-    float
-        Averrage BMI change per week
-    or plotly.fig
+    float or `plotly.graph_objects.Figure`
+        If `return_graph` is `True`, we get the average BMI change per week.
         If `return_graph` is `False`, we get a dictionary with key to be different
         exercises, and the value to be number of minutes (rounded to nearest
         integer) needed for that activity. Note that each of the activities are
-        associated as an "or". If `return_graph` is True, we get an `alt.Chart`
-        instead that can be saved or shared.
-    """
-    def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
+        associated as an "or". If `return_graph` is True, we get a
+        `plotly.graph_objects.Figure` instead that can be saved or shared.
         
-        # check for bad inputs
-        if not (
-            isinstance(weight, (int, float))
-            & isinstance(height, (int, float))
-            & isinstance(target_bmi, (int, float))
-            & isinstance(return_graph, bool)
-        ):
-            raise TypeError(
-                "TypeError! Please check the type of input parameters! "
-            )
-
-        if not ((weight > 0) & (height > 0)):
-            raise ValueError(
-                "ValueError! Please enter a positive non-zero weight and height!"
-            )
-
-        # BMI change computation
-        current_bmi = weight/height**2
-        bmi_change = target_bmi - current_bmi
-        bmi_change_per_day = bmi_change/number_of_days
-
-        # return computation or graph
-        if not return_graph:
-            return round(bmi_change_per_day*7, 2)
-        else:
-            df = {'Days': np.arange(0, number_of_days), 
-                'BMI change': np.arange(current_bmi, target_bmi,
-                bmi_change_per_day)[:number_of_days]}
-
-            if return_graph:
-                fig = px.line(df, x="Days", y="BMI change", title='Projected BMI trajectory')
-                fig.update_yaxes(range=[
-                    min(current_bmi, target_bmi)-3, max(current_bmi,target_bmi)+3])
+    Example
+    -------
+    >>> project_bmi(weight=108, height=1.88, target_bmi = 28, number_of_days=60)
+    
+    """
+    # check for bad inputs
+    if not (
+        isinstance(weight, (int, float))
+        & isinstance(height, (int, float))
+        & isinstance(target_bmi, (int, float))
+        & isinstance(number_of_days, (int, float))
+        & isinstance(return_graph, bool)
+    ):
+        raise TypeError("TypeError! Please check the type of input parameters! ")
+    if not ((weight > 0) & (height > 0) & (target_bmi > 0) & (number_of_days > 0)):
+        raise ValueError(
+            "ValueError! Please enter a positive value for weight, height, target_bmi, and number of days!"
+        )
+    # BMI change computation
+    current_bmi = weight / height**2
+    bmi_change = target_bmi - current_bmi
+    bmi_change_per_day = bmi_change / number_of_days
+    # return computation or graph
+    if not return_graph:
+        return round(bmi_change_per_day * 7, 2)
+    else:
+        df = {
+            "Days": np.arange(number_of_days),
+            "BMI change": np.linspace(
+                current_bmi, target_bmi, len(np.arange(number_of_days))
+            ),
+        }
+        fig = px.line(df, x="Days", y="BMI change", title="Projected BMI trajectory")
+        fig.update_yaxes(
+            range=[
+                min(current_bmi, target_bmi) - 3,
+                max(current_bmi, target_bmi) + 3,
+            ]
+        )
         return fig
