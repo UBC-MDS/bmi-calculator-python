@@ -1,11 +1,5 @@
 # Contributing
 
-### Contributors: 
-- Kelvin Wong 
-- Qurat-ul-Ain Azim
-- HanChen Wang
-- Natalie Cho
-
 Contributions are welcome, and they are greatly appreciated! Every little bit
 helps, and credit will always be given.
 
@@ -84,3 +78,10 @@ Before you submit a pull request, check that it meets these guidelines:
 
 Please note that the `bmi_calculator` project is released with a
 Code of Conduct. By contributing to this project you agree to abide by its terms.
+
+Any violations that occur can be reported to:
+
+- Qurat-ul-Ain Azim at qazim1@student.ubc.ca
+- HanChen Wang at hcwang24@student.ubc.ca
+- Kelvin Wong at now@student.ubc.ca
+- Natalie Cho at natcho1@student.ubc.ca
