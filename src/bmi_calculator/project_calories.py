@@ -43,7 +43,8 @@ def project_calories(
 
     Examples
     --------
-    >>> project_calories(68.1, 1.83, 1, 22, 1.6, 75, 25, return_graph=True)
+    >>> project_calories(100, 1.85, 1, 25, 1.6, 75, 25, return_graph=False)
+    >>> 2417.0400000000004
     """
     # Ensuring that inputs are valid
     if not (

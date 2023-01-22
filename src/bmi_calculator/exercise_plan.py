@@ -39,7 +39,11 @@ def exercise_plan(weight, height, sex, age, target_weight, number_of_days, retur
     
     Examples
     --------
-    >>> exercise_plan(68.1, 1.83, 1, 22, 65.0, 30, return_graph=True)
+    >>> exercise_plan(100, 1.83, 2, 27, 68, 30)
+    >>> {'Leisure cycling or walking': 213,
+    >>> 'Moderate rope-jumping': 88,
+    >>> 'General running': 112,
+    >>> 'Leisure swimming': 156}
     """
     # Compute daily calorie loss, assume the lowest activity level
     calorie_loss_projection = project_calories(

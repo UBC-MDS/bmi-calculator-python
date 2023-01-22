@@ -24,6 +24,12 @@ def calculate_bmi(weight, height, return_graph=False):
         If `return_graph` is `False`, we get a value of the body mass index.
         If `return_graph` is True, we get a `plotly.graph_objects.Figure`
         instead that can be saved or shared.
+    
+    Examples
+    -------
+    >>> calculate_bmi(100, 1.85, return_graph=False)
+    >>> 29.218407596785973
+    
     """
     if not (
         isinstance(weight, (int, float))
