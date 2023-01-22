@@ -6,8 +6,8 @@ def calculate_bmi(weight, height, return_graph=False):
 
     Body Mass Index (BMI) is a calculated measure of weight relative to height,
     defined as body weight in kilograms divided by height in meters squared
-    (Keys et al., 1972). If `return_graph` is `True`, an `alt.Chart` object
-    instead of a bmi value.
+    (Keys et al., 1972). If `return_graph` is `True`, an
+    `plotly.graph_objects.Figure` object instead of a bmi value.
 
     Parameters
     ----------
@@ -22,9 +22,8 @@ def calculate_bmi(weight, height, return_graph=False):
     -------
     float or plotly.graph_objects
         If `return_graph` is `False`, we get a value of the body mass index.
-        If `return_graph` is True, we get an `plotly.graph_objects` instead that can be
-        saved or shared. Could be a simplified version of
-        https://cdn.dribbble.com/users/31916/screenshots/310892/bmi-chart.png
+        If `return_graph` is True, we get a `plotly.graph_objects.Figure`
+        instead that can be saved or shared.
     """
     if not (
         isinstance(weight, (int, float))
