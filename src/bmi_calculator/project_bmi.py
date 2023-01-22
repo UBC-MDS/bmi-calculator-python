@@ -33,6 +33,11 @@ def project_bmi(weight, height, target_bmi, number_of_days, return_graph=False):
         integer) needed for that activity. Note that each of the activities are
         associated as an "or". If `return_graph` is True, we get a
         `plotly.graph_objects.Figure` instead that can be saved or shared.
+    
+    Example
+    -------
+    >>> project_bmi(weight=108, height=1.88, target_bmi = 28, number_of_days=60)
+    >>> -0.3
     """
     # check for bad inputs
     if not (
