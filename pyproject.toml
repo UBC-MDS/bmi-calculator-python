@@ -24,7 +24,7 @@ sphinx-rtd-theme = "^1.1.1"
 
 [tool.semantic_release]
 version_source = "commit"                   # version source
-version_variable = "pyproject.toml:version" # version location
+version_variable = "bmi_calculator/__init__.py:__version__" # version location
 branch = "master"                           # branch to make releases of
 changelog_file = "CHANGELOG.md"             # changelog file
 build_command = "poetry build"              # build dists
