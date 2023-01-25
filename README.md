@@ -1,4 +1,8 @@
-# bmi_calculator
+# bmi_calculator [![codecov](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/tree/master)
+
+> Authors: Qurat-ul-Ain Azim, Natalie Cho, HanChen Wang, Kelvin Wong
+>
+> Project complete in accordance with DSCI 524 for the UBC MDS Program 2022-23 for Group 12
 
 This python package is for calculation of BMI (body mass index), and some more computations based on weight loss goals. The package provides simple answers to a user's weight loss goals in terms of how much weight loss/gain and calorie deficit/increase should be aimed for with a target weight and time frame in mind.  The package also provides helpful visualizations about BMI and calorie intake change trajectory leading to the target.
 

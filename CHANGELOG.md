@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
-## v0.1.0 (10/01/2023)
+## v1.1.0 (24/01/2023)
 
-- First release of `bmi_calculator`!
+- Milestone 3 (Prerelease)
+
+## v1.0.0 (21/01/2023)
+
+- Milestone 2
+
+## v0.1.0 (14/01/2023)
+
+- Milestone 1
