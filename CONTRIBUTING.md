@@ -47,10 +47,10 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `bmi_calculator` for local development.
+Ready to contribute? Here's how to set up `bmigraph` for local development.
 
-1. Download a copy of `bmi_calculator` locally.
-2. Install `bmi_calculator` using `poetry`:
+1. Download a copy of `bmigraph` locally.
+2. Install `bmigraph` using `poetry`:
 
     ```console
     $ poetry install
@@ -76,7 +76,7 @@ Before you submit a pull request, check that it meets these guidelines:
 
 ## Code of Conduct
 
-Please note that the `bmi_calculator` project is released with a
+Please note that the `bmigraph` project is released with a
 Code of Conduct. By contributing to this project you agree to abide by its terms.
 
 Any violations that occur can be reported to:

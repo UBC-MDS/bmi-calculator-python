@@ -29,14 +29,14 @@
 * Remove references to altair ([`4012618`](https://github.com/UBC-MDS/bmi-calculator-python/commit/4012618333cc0cf456769514f2013400d657f33e))
 * Edited contributing.md file to add team member names and add github flow specifications ([`7b07974`](https://github.com/UBC-MDS/bmi-calculator-python/commit/7b079744a878bfff7917c851e9f405a2b8c9ddfe))
 
-## v1.1.0 (24/01/2023)
+## v1.1.0 (2023-01-24)
 
 - Milestone 3 (Prerelease)
 
-## v1.0.0 (21/01/2023)
+## v1.0.0 (2023-01-21)
 
 - Milestone 2
 
-## v0.1.0 (14/01/2023)
+## v0.1.0 (2023-01-14)
 
 - Milestone 1

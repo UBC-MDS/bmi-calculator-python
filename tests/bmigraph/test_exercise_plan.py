@@ -1,4 +1,4 @@
-from bmi_calculator import exercise_plan
+from bmigraph import exercise_plan
 import plotly.graph_objects as go
 import pytest
 

@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=bmi_calculator
+set SPHINXPROJ=bmigraph
 
 if "%1" == "" goto help
 

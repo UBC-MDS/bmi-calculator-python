@@ -1,10 +1,10 @@
-bmi_calculator
-==============
+bmigraph
+========
 
 .. toctree::
    :maxdepth: 4
 
-   bmi_calculator
+   bmigraph
 
 .. image:: ../../_images/calculate_bmi_graph_example.png
   :width: 400

@@ -1,4 +1,4 @@
-from bmi_calculator import project_bmi
+from bmigraph import project_bmi
 import plotly.express as px
 import plotly
 import pytest

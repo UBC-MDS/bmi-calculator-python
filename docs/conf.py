@@ -11,7 +11,7 @@ pio.renderers.default = 'sphinx_gallery'
 
 # -- Project information -----------------------------------------------------
 
-project = u"bmi_calculator"
+project = u"bmigraph"
 copyright = u"2023, Qurat-ul-Ain Azim, Natalie Cho, HanChen Wang, Kelvin Wong"
 author = u"Qurat-ul-Ain Azim, Natalie Cho, HanChen Wang, Kelvin Wong"
 

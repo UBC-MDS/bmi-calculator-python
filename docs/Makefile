@@ -3,7 +3,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = bmi_calculator
+SPHINXPROJ    = bmigraph
 SOURCEDIR     = .
 BUILDDIR      = _build
 

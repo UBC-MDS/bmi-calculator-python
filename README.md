@@ -1,4 +1,4 @@
-# bmi_calculator [![codecov](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/tree/master)
+# bmigraph [![codecov](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/tree/master) [![Documentation Status](https://readthedocs.org/projects/bmigraph/badge/?version=latest)](https://bmigraph.readthedocs.io/en/latest/?badge=latest)
 
 > Authors: Qurat-ul-Ain Azim, Natalie Cho, HanChen Wang, Kelvin Wong
 >
@@ -23,7 +23,7 @@ Our BMI calculator is unique in the sense that it provides easy and instantly un
 ## Installation
 
 ```bash
-$ pip install bmi_calculator
+$ pip install bmigraph
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ $ pip install bmi_calculator
 To use the package, import the package with following command:
 
 ```
-from bmi_calculator import calculate_bmi, exercise_plan, project_bmi, project_calories
+from bmigraph import calculate_bmi, exercise_plan, project_bmi, project_calories
 ```
 
 To use the functions, see examples below:
@@ -96,8 +96,8 @@ The list of contributors to the original project can be found [here](https://git
 
 ## License
 
-`bmi_calculator` was created by Qurat-ul-Ain Azim, Natalie Cho, HanChen Wang, Kelvin Wong. It is licensed under the terms of the MIT license.
+`bmigraph` was created by Qurat-ul-Ain Azim, Natalie Cho, HanChen Wang, Kelvin Wong. It is licensed under the terms of the MIT license.
 
 ## Credits
 
-`bmi_calculator` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`bmigraph` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
