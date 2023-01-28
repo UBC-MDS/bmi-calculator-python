@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.3.0 (2023-01-28)
+### Feature
+* Rename package ([`448e2c1`](https://github.com/UBC-MDS/bmi-calculator-python/commit/448e2c1bb0a31c4c3486a6e83d4b682675d1a30f))
+
 ## v1.2.1 (2023-01-28)
 ### Documentation
 * Add require.min.js to build ([`7ccacc5`](https://github.com/UBC-MDS/bmi-calculator-python/commit/7ccacc5d3c136ac5de01015b0308a5b12f0409fd))
