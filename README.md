@@ -45,7 +45,7 @@ calculate_bmi(100, 1.85, return_graph=False)
 # Weight 100kg, height 1.85 meters, BMI graph returned.
 calculate_bmi(100, 1.85, return_graph=True)
 ```
-![BMI graph](./img/calculate_bmi_graph_example.png)
+![BMI graph](_images/calculate_bmi_graph_example.png)
 
 ### Compute average BMI change per week
 ```
@@ -56,7 +56,7 @@ project_bmi(100, 1.85, 25, 30, return_graph=False)
 # Weight 100kg, height 1.85 meters, BMI goal 25, 30 days to reach goal, return plot of Projected BMI trajectory. 
 project_bmi(100, 1.85, 25, 30, return_graph=True)
 ```
-![Projected BMI trajectory graph](./img/project_bmi_graph_example.png)
+![Projected BMI trajectory graph](_images/project_bmi_graph_example.png)
 
 ### Compute caloric intake per day based in a target weight
 ```
@@ -69,7 +69,7 @@ project_calories(100, 1.85, 1, 25, 1.6, 75, 25, return_graph=False)
 # 25 days to reach goal, return plot of Projected Weight Loss. 
 project_calories(100, 1.85, 1, 25, 1.6, 75, 25, return_graph=True)
 ```
-![Projected Weight Loss graph](./img/project_calories_graph_example.png)
+![Projected Weight Loss graph](_images/project_calories_graph_example.png)
 
 ### Create an exercise plan
 ```
@@ -86,7 +86,7 @@ exercise_plan(100, 1.83, 2, 27, 68, 30)
 # But this time, a graph instead:
 exercise_plan(100, 1.83, 2, 27, 68, 30, return_graph=True)
 ```
-![Exercise plan](./img/exercise_plan_graph_example.png)
+![Exercise plan](_images/exercise_plan_graph_example.png)
 
 ## Contributing
 

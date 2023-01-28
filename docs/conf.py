@@ -4,6 +4,11 @@
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+# Required by Plotly graphs
+# See https://sphinx-gallery.github.io/stable/auto_examples/plot_9_plotly.html
+import plotly.io as pio
+pio.renderers.default = 'sphinx_gallery'
+
 # -- Project information -----------------------------------------------------
 
 project = u"bmi_calculator"
@@ -34,3 +39,17 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
+
+# An ugly hack because `include`d MDs can't get its path rewritten to map
+# as relative paths...
+html_extra_path = [
+    "../img"
+]
+
+# For the gallery to be rendered properly in browsers
+html_js_files = [
+    "require-2.3.6.min.js"
+]
+html_static_path = [
+    "assets/require-2.3.6.min.js"
+]
