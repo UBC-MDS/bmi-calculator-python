@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.2.1 (2023-01-28)
+### Documentation
+* Add require.min.js to build ([`7ccacc5`](https://github.com/UBC-MDS/bmi-calculator-python/commit/7ccacc5d3c136ac5de01015b0308a5b12f0409fd))
+* Fix image in generated HTML ([`6de1c7b`](https://github.com/UBC-MDS/bmi-calculator-python/commit/6de1c7bf5b64265def83fb4f4fec565177009d01))
+* Generate docs/source/*.rst ([`da48710`](https://github.com/UBC-MDS/bmi-calculator-python/commit/da487100ea79dfd661bff2691e87c103d3b4f5a3))
+
 ## v1.2.0 (2023-01-25)
 ### Feature
 * **src python scripts:** Added example usage ([`479a4dc`](https://github.com/UBC-MDS/bmi-calculator-python/commit/479a4dc3a41445e542e5d4c0ceac2d5cdc136584))
