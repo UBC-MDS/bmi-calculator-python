@@ -34,3 +34,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
+
+# An ugly hack because `include`d MDs can't get its path rewritten to map
+# as relative paths...
+html_extra_path = ["../img"]
