@@ -10,7 +10,6 @@ readme = "README.md"
 python = ">=3.9"
 plotly = ">=5.12.0"
 plotly-express = "^0.4.1"
-pytest = "^7.2.1"
 
 [tool.poetry.dev-dependencies]
 
@@ -21,6 +20,7 @@ python-semantic-release = "^7.33.0"
 myst-nb = {version = "^0.17.1", python = "^3.9"}
 sphinx-autoapi = "^2.0.1"
 sphinx-rtd-theme = "^1.1.1"
+sphinxcontrib-napoleon = "^0.7"
 
 [tool.semantic_release]
 version_source = "commit"                   # version source
