@@ -1,4 +1,4 @@
-from bmi_calculator import project_calories
+from bmigraph import project_calories
 import plotly.express as px
 import plotly
 import pytest
