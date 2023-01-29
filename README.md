@@ -1,4 +1,4 @@
-# bmigraph [![codecov](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/tree/master) [![Documentation Status](https://readthedocs.org/projects/bmigraph/badge/?version=latest)](https://bmigraph.readthedocs.io/en/latest/?badge=latest)
+# bmigraph [![codecov](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/bmi-calculator-python/tree/master) [![Documentation Status](https://readthedocs.org/projects/bmigraph/badge/?version=latest)](https://bmigraph.readthedocs.io/en/latest/?badge=latest) ![example workflow](https://github.com/UBC-MDS/bmi-calculator-python/actions/workflows/ci-cd.yml/badge.svg)
 
 > Authors: Qurat-ul-Ain Azim, Natalie Cho, HanChen Wang, Kelvin Wong
 >
