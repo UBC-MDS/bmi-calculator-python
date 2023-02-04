@@ -2,6 +2,9 @@
 
 <!--next-version-placeholder-->
 
+## v1.4.1 (2023-02-04)
+
+
 ## v1.4.0 (2023-01-29)
 ### Feature
 * **ci/cd badge:** Adding a workflow status badge ([`4a423ca`](https://github.com/UBC-MDS/bmi-calculator-python/commit/4a423cab5115c80d802da9001a70aba7f520ef50))

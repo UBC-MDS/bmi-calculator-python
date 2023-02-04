@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bmigraph"
-version = "1.4.0"
+version = "1.4.1"
 description = "A BMI calculator and more!"
 authors = ["Qurat-ul-Ain Azim, Natalie Cho, HanChen Wang, Kelvin Wong"]
 license = "MIT"
